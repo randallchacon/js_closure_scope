@@ -1,11 +1,8 @@
-var scope = 'im global';
-
-const functionScope = () => {
-    var scope = 'im just a local';
-    const func = () => {
-        return scope
+const anotherFunction2 = () =>{
+    for(let i=0; i<10; i++){
+        setTimeout(() => {
+            console.log(i);
+        },1000)
     }
-    console.log(func());
 }
-functionScope();
-console.log(scope);
+anotherFunction2();
