@@ -1,11 +1,11 @@
-var hello = 'Hello';
-let world = 'Hello World';
-const helloWorld = 'Hello Word!';
+var scope = 'im global';
 
-const anotherFunction = () => {
-    console.log(hello);
-    console.log(world);
-    console.log(helloWorld);
+const functionScope = () => {
+    var scope = 'im just a local';
+    const func = () => {
+        return scope
+    }
+    console.log(func());
 }
-
-anotherFunction();
+functionScope();
+console.log(scope);
